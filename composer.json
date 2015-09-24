@@ -1,0 +1,21 @@
+{
+    "name": "cyberz/yii2-multipath-migrations",
+    "description": "Allow to apply migrations from multiple paths or aliases",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension", "multiple path", "migrations", "aliases"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "cyberz",
+            "email": "webunit.dev@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "cyberz\\migrations\\": "src/"
+        }
+    }
+}
