@@ -1,6 +1,6 @@
 <?php
 
-namespace cyberz\migartions\controllers;
+namespace cyberz\migrations\controllers;
 
 use Yii;
 use yii\console\Exception;
