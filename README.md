@@ -18,11 +18,11 @@ In your console application configuration add:
         'migrate' => [
             'class' => 'cyberz\migrations\controllers\MigrationsController',
             'migrationLookup' => [
-                '@app',                         // will look in .../migrations/migration_name.php AND .../<some-dir-name>/migrations/migration_name.php
-                '@backend',                     // will look in .../backend/<some-dir-name>/migrations/migration_name.php AND .../backend/modules/<some-dir-name>/migrations/migration_name.php 
-                '@frontend/modules',            // will look in .../frontend/modules/<some-dir-name>/migrations/migration_name.php
-                '@app/some/path/to/migrations', // will look in .../some/path/to/migrations/migration_name.php
-                '@app/some/*/to/*/migrations',  // will look in .../some/<some-dir-name>/to/<some-dir-name>/migrations
+                '@app',                         // will lookup in .../migrations/migration_name.php AND .../<some-dir-name>/migrations/migration_name.php
+                '@backend',                     // will lookup in .../backend/<some-dir-name>/migrations/migration_name.php AND .../backend/modules/<some-dir-name>/migrations/migration_name.php 
+                '@frontend/modules',            // will lookup in .../frontend/modules/<some-dir-name>/migrations/migration_name.php
+                '@app/some/path/to/migrations', // will lookup in .../some/path/to/migrations/migration_name.php
+                '@app/some/*/to/*/migrations',  // will lookup in .../some/<some-dir-name>/to/<some-dir-name>/migrations
             ],
         ],
     ],
