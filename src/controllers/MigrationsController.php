@@ -9,7 +9,6 @@ use yii\helpers\FileHelper;
 
 class MigrationsController extends MigrateController
 {
-
     /**
      * @var array aliases of directories
      */
@@ -45,7 +44,6 @@ class MigrationsController extends MigrateController
      */
     protected function lookupMigrations()
     {
-
         if (!empty($this->_cachedLookUp))
             return $this->_cachedLookUp;
 
@@ -68,7 +66,7 @@ class MigrationsController extends MigrateController
 
             foreach ($patterns as $pattern) {
                 foreach (glob($pattern) as $path) {
-                    if (preg_match('/^(m(\d{6}_\d{6})_.*?)\.php$/', basename($path), $matches) /*&& !isset($applied[$matches[2]])*/ && is_file($path)) {
+                    if (preg_match('/^(m\d{6}_\d{6}_.*?)\.php$/', basename($path), $matches) && is_file($path)) {
                         $migrations[$matches[1]] = $path;
                     }
                 }
