@@ -65,7 +65,7 @@ class MigrationsController extends MigrateController
             }
 
             foreach ($patterns as $pattern) {
-                foreach (glob($pattern) as $path) {
+                foreach (glob($pattern, GLOB_NOSORT) as $path) {
                     if (preg_match('/^(m\d{6}_\d{6}_.*?)\.php$/', basename($path), $matches) && is_file($path)) {
                         $migrations[$matches[1]] = $path;
                     }
