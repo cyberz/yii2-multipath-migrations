@@ -47,7 +47,7 @@ class MigrationsController extends MigrateController
         if (!empty($this->_cachedLookUp))
             return $this->_cachedLookUp;
 
-        $this->migrationLookup[] = $this->migrationPath;
+        $this->migrationLookup = array_merge($this->migrationLookup,$this->migrationPath);
 
         $migrations = [];
         $ds = DIRECTORY_SEPARATOR;
